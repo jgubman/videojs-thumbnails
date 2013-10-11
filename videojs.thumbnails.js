@@ -27,9 +27,10 @@
    * register the thubmnails plugin
    */
   videojs.plugin('thumbnails', function(options) {
-    var div, settings, img, player, progressControl, duration;
+    var div, settings, img, player, progressControl, duration, playerWidth;
     settings = extend({}, defaults, options);
     player = this;
+    playerWidth = player.el().offsetWidth;
 
     // create the thumbnail
     div = document.createElement('div');
@@ -68,7 +69,7 @@
       left -= progressControl.el().getBoundingClientRect().left + window.scrollX;
       // Stay within the bounds of the video
       left = Math.max(left, img.naturalWidth / 2);
-      left = Math.min(left, progressControl.el().offsetWidth - (img.naturalWidth / 2));
+      left = Math.min(left, playerWidth - (img.naturalWidth / 2));
       div.style.left = left + 'px';
 
       // apply updated styles to the thumbnail if necessary
