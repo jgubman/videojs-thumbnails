@@ -23,4 +23,3 @@ Once you have your video created, you can activate the thumbnails plugin. In the
       }
     });
 
-For each thumbnail time period, you can specify any other style changes you'd like to change when the user enters that region of the progress bar. Check out example.html to see how that technique can be used to create multiple thumbnails out of a single, sprited image.

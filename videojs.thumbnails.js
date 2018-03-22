@@ -57,12 +57,10 @@
     // add the thumbnail to the player
     progressControl = player.controlBar.progressControl;
     progressControl.el().appendChild(div);
-
     // update the thumbnail while hovering
     progressControl.el().addEventListener('mousemove', function(event) {
       var mouseTime, time, active, left, setting;
       active = 0;
-
       // find the page offset of the mouse
       left = event.pageX || (event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft);
       // subtract the page offset of the progress control
